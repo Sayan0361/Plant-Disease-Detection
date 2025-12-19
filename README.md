@@ -112,7 +112,7 @@ The `app.py` file provides an interactive web interface for disease detection:
 
 Here's an example of the Streamlit app in action:
 
-![Plant Disease Detection Demo](https://imgur.com/abc123.png)
+![Plant Disease Detection Demo](images/Demo.jpeg)
 
 The app successfully identifies plant diseases with high confidence. In this example, it detected **bacterial_leaf_blight** with **99.88% confidence**.
 
