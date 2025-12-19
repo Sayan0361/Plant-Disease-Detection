@@ -14,6 +14,7 @@ A lightweight, production-ready deep learning inference package for detecting pl
 - **torch** (PyTorch deep learning framework)
 - **torchvision** (PyTorch vision utilities)
 - **pillow** (Image processing library)
+- **streamlit** (Web UI framework)
 
 
 ---
@@ -21,7 +22,7 @@ A lightweight, production-ready deep learning inference package for detecting pl
 ## 🚀 Installation
 
 ```bash
-pip install torch torchvision pillow
+pip install torch torchvision pillow streamlit
 ```
 
 
@@ -29,7 +30,27 @@ pip install torch torchvision pillow
 
 ## ⚡ Quick Start
 
-### Basic Usage
+### Web UI with Streamlit (Recommended)
+
+1. **Ensure all dependencies are installed:**
+   ```bash
+   pip install torch torchvision pillow streamlit
+   ```
+
+2. **Run the Streamlit app:**
+   ```bash
+   streamlit run app.py
+   ```
+
+3. **The app will:**
+   - Open in your default browser (usually at `http://localhost:8501`)
+   - Display an interactive web interface
+   - Allow you to upload plant leaf images
+   - Show predictions with confidence scores in real-time
+
+4. **To stop the app:** Press `Ctrl+C` in your terminal
+
+### Basic Usage with inference.py
 
 1. **Place your plant leaf image** in the project folder (or in an `images/` subfolder)
 
@@ -53,6 +74,7 @@ pip install torch torchvision pillow
 ```
 plant_disease_inference/
 │
+├── app.py                                # Streamlit web application
 ├── inference.py                          # Main inference script
 ├── mobilenetv2_plant_disease_final.pth   # Pre-trained model weights
 ├── classes.json                          # Disease class mappings
@@ -68,7 +90,33 @@ plant_disease_inference/
 
 ## 🔍 Usage Guide
 
-### Using the `predict()` Function
+### Using the Streamlit Web App (app.py)
+
+The `app.py` file provides an interactive web interface for disease detection:
+
+**Features:**
+- 📤 Upload plant leaf images via a user-friendly interface
+- 🎯 Get instant predictions with disease classification
+- 📊 View confidence scores for predictions
+- 🖼️ Image preview before and after processing
+
+**How to use:**
+1. Run: `streamlit run app.py`
+2. Select "Upload leaf image" button
+3. Choose a plant leaf image (JPG, JPEG, or PNG)
+4. Click "Predict" to get the disease classification and confidence
+
+---
+
+## 📸 Demo
+
+Here's an example of the Streamlit app in action:
+
+![Plant Disease Detection Demo](https://imgur.com/abc123.png)
+
+The app successfully identifies plant diseases with high confidence. In this example, it detected **bacterial_leaf_blight** with **99.88% confidence**.
+
+---
 
 You can import and use the prediction function in your own Python code:
 

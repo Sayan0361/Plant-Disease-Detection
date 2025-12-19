@@ -17,10 +17,12 @@ TEST_IMAGES = [
     "images/yellow.JPG",
     "images/brown_spot.JPG",
     "images/healthy.JPG",
-    "images/leaf_blight.JPG"
+    "images/leaf_blight.JPG",
+    "images/black.jpg",
+    "images/download (3).jpg",
 ]
 
-TEST_INDEX = 4   # change this to 0, 1, 2 ...
+TEST_INDEX = 6  # change this to 0, 1, 2 ...
 # ---------------------------------------
 
 # Load classes
